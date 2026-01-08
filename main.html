@@ -7,25 +7,20 @@
 </head>
 <body>
 
-<!-- Hidden checkbox -->
 <input type="checkbox" id="modal-toggle">
 
-<!-- Button -->
-<label for="modal-toggle">
-    <button id="openModal">Open Modal</button>
-</label>
+<button id="openModal" onclick="document.getElementById('modal-toggle').checked = true">
+    Open Modal
+</button>
 
-<!-- Modal -->
 <div class="modal">
-
-    <!-- Overlay click -->
-    <label for="modal-toggle" class="overlay"></label>
-
     <div class="modal-content">
 
         <div class="modal-header">
             <h2>Modal Header</h2>
-            <label for="modal-toggle" class="close-modal">&times;</label>
+            <span class="close-modal" onclick="document.getElementById('modal-toggle').checked = false">
+                ×
+            </span>
         </div>
 
         <div class="modal-body">
@@ -37,4 +32,3 @@
 
 </body>
 </html>
-

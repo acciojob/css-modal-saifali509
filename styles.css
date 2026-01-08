@@ -4,47 +4,29 @@ body {
     padding: 40px;
 }
 
-/* Hide checkbox */
 #modal-toggle {
     display: none;
 }
 
-/* Open Button */
-#openModal {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Modal background */
+/* Modal default */
 .modal {
+    display: none;
     position: fixed;
     inset: 0;
-    display: none;
+    background: rgba(0,0,0,0.5);
 }
 
-/* Show modal when checked */
+/* OPEN STATE */
 #modal-toggle:checked ~ .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Overlay */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.5);
+    display: block;
 }
 
 /* Modal box */
 .modal-content {
-    position: relative;
-    background-color: white;
+    background: white;
     width: 400px;
-    border-radius: 5px;
-    z-index: 1;
-    animation: slideDown 0.3s ease;
+    margin: 150px auto;
+    border-radius: 6px;
 }
 
 /* Header */
@@ -53,28 +35,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
 }
 
 .close-modal {
-    font-size: 24px;
     cursor: pointer;
+    font-size: 22px;
 }
 
 /* Body */
 .modal-body {
     padding: 15px;
 }
-
-/* Animation */
-@keyframes slideDown {
-    from {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
