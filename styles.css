@@ -1,1 +1,80 @@
 /*  your css code here. If applicable */
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+/* Hide checkbox */
+#modal-toggle {
+    display: none;
+}
+
+/* Open Button */
+#openModal {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Modal background */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+/* Show modal when checked */
+#modal-toggle:checked ~ .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal box */
+.modal-content {
+    position: relative;
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    z-index: 1;
+    animation: slideDown 0.3s ease;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.close-modal {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Body */
+.modal-body {
+    padding: 15px;
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
