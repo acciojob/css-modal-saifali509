@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CSS Modal</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>CSS Modal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<input type="checkbox" id="modal-toggle">
+  <!-- Hidden checkbox -->
+  <input type="checkbox" id="modal-toggle" hidden>
 
-<button id="openModal" onclick="document.getElementById('modal-toggle').checked = true">
+  <!-- Open Modal Button -->
+  <label id="openModal" for="modal-toggle" class="open-btn">
     Open Modal
-</button>
+  </label>
 
-<div class="modal">
-    <div class="modal-content">
+  <!-- Modal (clicking outside closes it) -->
+  <label class="modal" for="modal-toggle">
+    <div class="modal-content" onclick="event.stopPropagation()">
 
-        <div class="modal-header">
-            <h2>Modal Header</h2>
-            <span class="close-modal" onclick="document.getElementById('modal-toggle').checked = false">
-                ×
-            </span>
-        </div>
+      <div class="modal-header">
+        <h2>Modal Header</h2>
+        <label for="modal-toggle" class="close-modal">×</label>
+      </div>
 
-        <div class="modal-body">
-            <p>Modal Body Content</p>
-        </div>
+      <div class="modal-body">
+        <p>Modal Body Content</p>
+      </div>
 
     </div>
-</div>
+  </label>
 
 </body>
 </html>
