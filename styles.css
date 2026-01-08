@@ -1,52 +1,49 @@
 /*  your css code here. If applicable */
-.open-btn {
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 4px;
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
 }
 
-/* Modal overlay */
+#modal-toggle {
+    display: none;
+}
+
+/* Modal default */
 .modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
 }
 
-/* Show modal */
-#modal-toggle:checked + .open-btn + .modal {
-  display: block;
+/* OPEN STATE */
+#modal-toggle:checked ~ .modal {
+    display: block;
 }
 
-/* Modal content */
+/* Modal box */
 .modal-content {
-  background: white;
-  width: 400px;
-  margin: 15% auto;
-  padding: 0;
-  cursor: default;
+    background: white;
+    width: 400px;
+    margin: 150px auto;
+    border-radius: 6px;
 }
 
 /* Header */
 .modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Close button */
 .close-modal {
-  cursor: pointer;
-  font-size: 20px;
+    cursor: pointer;
+    font-size: 22px;
 }
 
 /* Body */
 .modal-body {
-  padding: 15px;
+    padding: 15px;
 }
